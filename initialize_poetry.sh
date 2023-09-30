@@ -15,7 +15,8 @@ pip install --upgrade pip
 pip install poetry
 
 # Install the dependencies defined in pyproject.toml
-poetry install
+rm -rf poetry.lock
+poetry install --no-root --with test
 
 # Deactivate the environment
 deactivate
